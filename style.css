@@ -1,0 +1,345 @@
+/* Variables de color basadas en la imagen */
+:root {
+    --color-primary: #000080; /* Azul Oscuro (similar al fondo) */
+    --color-secondary: #ff4500; /* Naranja/Rojo (similar a los títulos) */
+    --color-text-light: #ffffff;
+    --color-text-dark: #333333;
+    --color-bg-light: #f4f4f4;
+}
+
+/* Base y Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-text-light);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Títulos y Secciones */
+.section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section h2 {
+    color: var(--color-primary);
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.section h3 {
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+}
+
+.bg-light {
+    background-color: var(--color-bg-light);
+}
+
+.bg-primary-dark {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+.bg-primary-dark h2 {
+    color: var(--color-secondary);
+}
+
+/* Logos y Botones (Asegúrate de tener tus imágenes 'logo-esport.png' y 'logo-esport-footer.png') */
+.logo {
+    width: 200px; /* Ajusta según el tamaño de tu logo */
+    margin-bottom: 15px;
+}
+
+/* --- Botones --- */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+}
+
+.btn-primary:hover {
+    background-color: #e83800; /* Tono más oscuro */
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-text-light);
+    border: 2px solid var(--color-text-light);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-full {
+    width: 100%;
+    margin: 15px 0 0 0;
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-whatsapp {
+    background-color: #25d366; /* Color de WhatsApp */
+    color: var(--color-text-light);
+    margin: 10px 0;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e;
+}
+
+
+/* --- 1. Hero Section --- */
+.hero {
+    background-image: url('hero-background.jpg'); /* Usar una imagen de carro/tornillos de fondo */
+    background-size: cover;
+    background-position: center;
+    color: var(--color-text-light);
+    padding: 100px 0;
+    position: relative;
+    height: 100vh; /* Ocupa toda la altura de la vista */
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurecer la imagen de fondo */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: var(--color-text-light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* --- 3. Nuestros Clientes --- */
+.logos-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.logo-placeholder {
+    width: 150px;
+    height: 75px;
+    line-height: 75px;
+    background-color: var(--color-text-light);
+    border: 1px solid #ccc;
+    margin: 10px;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+
+/* --- 4. Descargar Catálogo --- */
+.catalog-flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.catalog-info {
+    flex: 2;
+}
+
+.catalog-form-card {
+    flex: 1;
+    background-color: var(--color-text-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: var(--color-text-dark);
+}
+
+.catalog-form-card h3 {
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.catalog-form-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.catalog-images {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.catalog-card {
+    flex: 1;
+    min-height: 150px;
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+/* --- 5. Contactos / Enviar Correo --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    text-align: left;
+}
+
+.contact-info-block address,
+.contact-info-block p {
+    margin-bottom: 15px;
+}
+
+.contact-info-block strong {
+    color: var(--color-secondary);
+}
+
+.contact-form-block input,
+.contact-form-block textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form-block textarea {
+    resize: vertical;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding-top: 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.logo-footer {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-brand, .footer-links, .footer-whatsapp {
+    padding: 10px;
+}
+
+.social-icons a {
+    color: var(--color-secondary);
+    margin-right: 15px;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+.footer-copy {
+    background-color: #000066; /* Tono más oscuro del azul */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+
+
+/* --- Media Queries (Responsividad) --- */
+@media (max-width: 900px) {
+    .catalog-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .catalog-info, .catalog-form-card {
+        width: 100%;
+    }
+
+    .catalog-images {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+        height: auto;
+    }
+    
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-links, .footer-whatsapp {
+        margin-top: 15px;
+    }
+}
