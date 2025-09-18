@@ -60,7 +60,7 @@ body {
 
 /* Logos y Botones (Asegúrate de tener tus imágenes 'logo-esport.png' y 'logo-esport-footer.png') */
 .logo {
-    width: 200px; /* Ajusta según el tamaño de tu logo */
+    width: 350px; /* Ajusta según el tamaño de tu logo */
     margin-bottom: 15px;
 }
 
@@ -118,7 +118,7 @@ body {
 
 /* --- 1. Hero Section --- */
 .hero {
-    background-image: url('hero-background.jpg'); /* Usar una imagen de carro/tornillos de fondo */
+    background-image: url('assets/png/hero-background.png'); /* Usar una imagen de carro/tornillos de fondo */
     background-size: cover;
     background-position: center;
     color: var(--color-text-light);
